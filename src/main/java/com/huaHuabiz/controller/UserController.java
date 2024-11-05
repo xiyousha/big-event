@@ -16,7 +16,7 @@ public class UserController {
 
     @PostMapping("/register")
     public Result register(String username, String password) {
-        User user = userService.findByUserName();
+        User user = userService.findByUserName(username);
         if (user == null) {
             userService.register(username, password);
             return Result.success();
