@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
+
     @Override
     public User findByUserName(String username) {
         User user = userMapper.findByUserName(username);
@@ -21,6 +22,5 @@ public class UserServiceImpl implements UserService {
     public void register(String username, String password) {
         String md5String = Md5Util.getMD5String(password);
         userMapper.add(username, md5String);
-
     }
 }
