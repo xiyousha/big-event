@@ -1,8 +1,8 @@
-package com.huaHuabiz.service.impl.com.impl;
+package com.huaHuabiz.service.impl;
 
 import com.huaHuabiz.mapper.UserMapper;
 import com.huaHuabiz.pojo.User;
-import com.huaHuabiz.service.impl.UserService;
+import com.huaHuabiz.service.UserService;
 import com.huaHuabiz.utils.Md5Util;
 import com.huaHuabiz.utils.ThreadLocalUtil;
 import org.springframework.beans.factory.annotation.Autowired;

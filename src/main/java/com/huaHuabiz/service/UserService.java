@@ -1,4 +1,4 @@
-package com.huaHuabiz.service.impl;
+package com.huaHuabiz.service;
 
 import com.huaHuabiz.pojo.User;
 

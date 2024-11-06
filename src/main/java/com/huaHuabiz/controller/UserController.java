@@ -2,7 +2,7 @@ package com.huaHuabiz.controller;
 
 import com.huaHuabiz.pojo.Result;
 import com.huaHuabiz.pojo.User;
-import com.huaHuabiz.service.impl.UserService;
+import com.huaHuabiz.service.UserService;
 import com.huaHuabiz.utils.JwtUtil;
 import com.huaHuabiz.utils.Md5Util;
 import com.huaHuabiz.utils.ThreadLocalUtil;
@@ -96,6 +96,12 @@ public class UserController {
         userService.updateAvatar(avatarUrl);
         return Result.success();
     }
+
+    /**
+     * 更新用户密码
+     * @param params
+     * @return
+     */
 
     @PatchMapping("/updatePwd")
     public Result updatePwd(@RequestBody Map<String, String> params) {
