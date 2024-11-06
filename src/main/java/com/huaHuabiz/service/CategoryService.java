@@ -9,5 +9,5 @@ public interface CategoryService {
 
     List<Category> list();
 
-    Category categoryDetails(Integer id);
+    Category findById(Integer id);
 }

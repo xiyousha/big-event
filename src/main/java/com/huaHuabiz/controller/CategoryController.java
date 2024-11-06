@@ -39,7 +39,7 @@ public class CategoryController {
 
     @GetMapping("/details/{id}")
     public Result categoryDetails(@PathVariable("id") Integer id) {
-        Category category = categoryService.categoryDetails(id);
+        Category category = categoryService.findById(id);
         return Result.success(category);
     }
 }

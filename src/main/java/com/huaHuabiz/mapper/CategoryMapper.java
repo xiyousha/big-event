@@ -19,5 +19,5 @@ public interface CategoryMapper {
     List<Category> list(Integer id);
 
     @Select("select * from category where id = #{id}")
-    Category categoryDetails(Integer id);
+    Category findById(Integer id);
 }
