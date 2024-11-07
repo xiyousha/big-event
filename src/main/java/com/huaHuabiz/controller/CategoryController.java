@@ -22,7 +22,7 @@ public class CategoryController {
      * @return
      */
     @PostMapping("/add")
-    public Result add(@RequestBody @Validated Category category) {
+    public Result add(@RequestBody @Validated(Category.Add.class) Category category) {
         categoryService.add(category);
         return Result.success();
     }
@@ -37,9 +37,20 @@ public class CategoryController {
         return Result.success(list);
     }
 
+    /**
+     * 获取文章详情
+     * @param id
+     * @return
+     */
     @GetMapping("/details/{id}")
     public Result categoryDetails(@PathVariable("id") Integer id) {
         Category category = categoryService.findById(id);
         return Result.success(category);
+    }
+
+    @PutMapping("/update")
+    public Result updateCategory(@RequestBody @Validated(Category.Update.class) Category category) {
+        categoryService.updateCategory(category);
+        return Result.success();
     }
 }
